@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <label for="sourceMoney"></label>
+    <input type="text" id="sourceMoney" > 
+
+    <button type="submit" id="go">Go</button>
+
+        <h3 id="daily_55">55%</h3>
+        <h3 id="study_10">10%</h3>
+        <h3 id="enjoy_10">10%</h3>
+        <h3 id="long_term_saving_10">10%</h3>
+        <h3 id="invest_10">10%</h3>
+        <h3 id="charity_5">5%</h3> 
+
+</body> 
+
+<script>
+    var sourceMoney ;
+    var daily_55 ; 
+    var study_10;
+    var enjoy_10 ;
+    var long_term_saving_10 ;
+    var invest_10 ; 
+    var charity_5  ; 
+
+        // let button_go_change = document.getElementById("go").addEventListener("change",() =>{
+        //     console.log("change");dfg
+        //     sourceMoney = document.getElementById("sourceMoney").value ;
+        //     document.getElementById("sourceMoney").value  = sourceMoney.toLocaleString('en-us');
+            
+        // })
+
+        let button_go = document.getElementById("go").addEventListener("click",() =>{
+
+            sourceMoney = document.getElementById("sourceMoney").value ;
+            console.log("document clicked ");
+            daily_55 = sourceMoney / 100 * 55 ; 
+            study_10 = sourceMoney / 100 * 10 ;
+            enjoy_10 = sourceMoney / 100 * 10 ;
+            long_term_saving_10 = sourceMoney / 100 * 10 ;
+            invest_10 = sourceMoney / 100 * 10 ;
+            charity_5 = sourceMoney / 100 * 5 ;
+
+
+            document.getElementById("daily_55").innerHTML =  "Chi tiêu hàng tháng  "+ daily_55.toLocaleString('en-us') +"vnd";
+            document.getElementById("study_10").innerHTML = "Đầu tư giáo dục "+ study_10.toLocaleString('en-us') +"vnd";
+            document.getElementById("enjoy_10").innerHTML = "Hưởng thụ "+ enjoy_10.toLocaleString('en-us') +"vnd";
+            document.getElementById("long_term_saving_10").innerHTML =  "Đầu tư dài hạn" +long_term_saving_10.toLocaleString('en-us') +"vnd";
+            document.getElementById("invest_10").innerHTML = "Chứng khóan , cố phiếu , coin , ... " + invest_10.toLocaleString('en-us') +"vnd";
+            document.getElementById("charity_5").innerHTML = "Từ thiện "+  charity_5.toLocaleString('en-us') +"vnd";
+
+        })
+
+
+
+</script>
+</html>
